@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+	<description>Example configuration to get you started.</description>
+
+	
+	<bean id="bean_com_cmall_dborm_txmapper_McLoginInfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McLoginInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+
+	<bean id="bean_com_cmall_dborm_txmapper_McMemberInfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McMemberInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	
+	
+	<bean id="bean_com_cmall_dborm_txmapper_McAccountInfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McAccountInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	
+	
+	<bean id="bean_com_cmall_dborm_txmapper_McExtendInfoStarMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McExtendInfoStarMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_McExtendInfoHomehasMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McExtendInfoHomehasMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	
+
+	<bean id="bean_com_cmall_dborm_txmapper_McExtendInfoHomepoolMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.membercenter.McExtendInfoHomepoolMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberForStar" class="com.cmall.membercenter.txservice.TxMemberForStar">
+
+	</bean>
+
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberBase" class="com.cmall.membercenter.txservice.TxMemberBase">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberForHomeHas" class="com.cmall.membercenter.txservice.TxMemberForHomeHas">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberForHomePool" class="com.cmall.membercenter.txservice.TxMemberForHomePool">
+
+	</bean>
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberForGroupService" class="com.cmall.membercenter.txservice.TxMemberForGroupService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_membercenter_txservice_TxMemberForWx" class="com.cmall.membercenter.txservice.TxMemberForWx">
+
+	</bean>
+
+</beans>

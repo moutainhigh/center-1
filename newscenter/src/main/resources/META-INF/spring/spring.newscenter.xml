@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+	<description>Example configuration to get you started.</description>
+
+	
+
+	
+	<bean id="bean_com_cmall_newscenter_service_TxTryOrderService" 
+	class="com.cmall.newscenter.service.TxTryOrderService">
+
+	</bean>
+<!--
+	<bean id="bean_com_cmall_ordercenter_txservice_TxJiFenService" class="com.cmall.ordercenter.txservice.TxJiFenService">
+
+	</bean>
+-->
+<bean id="bean_com_cmall_newscenter_service_TxReturnGoodsService"
+		class="com.cmall.newscenter.service.TxReturnGoodsService">
+	</bean>
+<bean id="bean_com_cmall_dborm_txmapper_OcReturnGoodsMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.OcReturnGoodsMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcReturnGoodsDetailMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.OcReturnGoodsDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	
+	
+	<bean id="bean_com_cmall_newscenter_service_TxExchangeGoodsService"
+		class="com.cmall.newscenter.service.TxExchangeGoodsService">
+	</bean>
+<bean id="bean_com_cmall_dborm_txmapper_OcExchangeGoodsMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.OcExchangeGoodsMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcExchangeGoodsDetailMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.OcExchangeGoodsDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+</beans>

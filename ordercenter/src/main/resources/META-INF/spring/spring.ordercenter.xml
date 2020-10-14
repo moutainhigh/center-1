@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+	<description>Example configuration to get you started.</description>
+
+	
+
+
+
+
+	<!-- <bean id="bean_com_cmall_ordercenter_service_HOrderService" class="com.cmall.ordercenter.service.HOrderService"></bean> -->
+
+	<bean id="bean_com_cmall_dborm_txmapper_LcOrderstatusMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.LcOrderstatusMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_logcenter"></property>
+	</bean>
+
+	<bean id="bean_com_cmall_dborm_txmapper_LcStockchangeMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.LcStockchangeMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_logcenter"></property>
+	</bean>
+
+	
+	
+	<bean id="bean_com_cmall_dborm_txmapper_PcProductinfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.PcProductinfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_productcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_PcSkuinfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.PcSkuinfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_productcenter"></property>
+	</bean>
+	
+		<bean id="bean_com_cmall_dborm_txmapper_PcSkuinfoMapperForD" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.PcSkuinfoMapperForD"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_productcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcTryoutProductsMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcTryoutProductsMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderActivityMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderActivityMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderadressMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderadressMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderdetailMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderdetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderinfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderinfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderinfoUpperMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderinfoUpperMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_OcOrderPayMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.OcOrderPayMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_ordercenter"></property>
+	</bean>
+	
+<!-- 	<bean id="bean_com_cmall_dborm_txmapper_JifenLogMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.JifenLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_score"></property>
+	</bean>
+ 
+	
+	<bean id="bean_com_cmall_dborm_txmapper_JifenInfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.JifenInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_score"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_JifenInfoMapperForD" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.JifenInfoMapperForD"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_score"></property>
+	</bean>
+-->
+	<bean id="bean_com_cmall_ordercenter_txservice_TxOrderService" class="com.cmall.ordercenter.txservice.TxOrderService">
+
+	</bean>
+	
+	
+<!--
+	<bean id="bean_com_cmall_ordercenter_txservice_TxJiFenService" class="com.cmall.ordercenter.txservice.TxJiFenService">
+
+	</bean>
+-->
+
+	<bean id="bean_com_cmall_ordercenter_service_FlashsalesService" class="com.cmall.ordercenter.service.FlashsalesService"></bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_PcProductinfoExtMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.PcProductinfoExtMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_productcenter"></property>
+	</bean>	
+</beans>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd ">
+
+	<description>Example configuration to get you started.</description>
+
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcGroupAccountMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcGroupAccountMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcAccountChangeLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcAccountChangeLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcReckonOrderInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcReckonOrderInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcReckonOrderDetailMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcReckonOrderDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcActiveLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcActiveLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcActiveMonthMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcActiveMonthMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcActiveMonthMoneyMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcActiveMonthMoneyMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcReckonLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcReckonLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcGroupLevelMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcGroupLevelMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcLevelLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcLevelLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcWithdrawLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcWithdrawLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcPayOrderInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcPayOrderInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcPayOrderLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcPayOrderLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcAccountMarketingMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcAccountMarketingMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcPayOrderDetailMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcPayOrderDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderWalletMapper"
+		  class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+				  value="com.cmall.dborm.txmapper.groupcenter.GcTraderWalletMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderWalletChangeLogMapper"
+		  class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+				  value="com.cmall.dborm.txmapper.groupcenter.GcTraderWalletChangeLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcWalletWithdrawInfoMapper"
+		  class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+				  value="com.cmall.dborm.txmapper.groupcenter.GcWalletWithdrawInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcWalletWithdrawLogMapper"
+		  class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+				  value="com.cmall.dborm.txmapper.groupcenter.GcWalletWithdrawLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderDepositBalanceMapper"
+		  class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+				  value="com.cmall.dborm.txmapper.groupcenter.GcTraderDepositBalanceMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxGroupAccountService"
+		class="com.cmall.groupcenter.txservice.TxGroupAccountService">
+
+	</bean>
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxAccountMarketingService"
+		class="com.cmall.groupcenter.txservice.TxAccountMarketingService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxReckonOrderService"
+		class="com.cmall.groupcenter.txservice.TxReckonOrderService">
+
+	</bean>
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxGroupCancelReturnOrderService" class="com.cmall.groupcenter.txservice.TxGroupCancelReturnOrderService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxWithdrawCashService"
+		class="com.cmall.groupcenter.txservice.TxWithdrawCashService">
+
+	</bean>
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxTraderWalletService"
+		class="com.cmall.groupcenter.txservice.TxTraderWalletService">
+
+	</bean>
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxRebateOrderService"
+		class="com.cmall.groupcenter.txservice.TxRebateOrderService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxRebateOrderServiceForConsumptionAmount"
+		class="com.cmall.groupcenter.txservice.TxRebateOrderServiceForConsumptionAmount">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxReckonOrderServiceForConsumptionAmount"
+		class="com.cmall.groupcenter.txservice.TxReckonOrderServiceForConsumptionAmount">
+
+	</bean>
+
+	<bean id="bean_com_cmall_groupcenter_txservice_TxTraderInfoCreateService"
+		  class="com.cmall.groupcenter.txservice.TxTraderInfoCreateService">
+
+	</bean>
+	
+		<bean id="bean_com_cmall_groupcenter_txservice_TxTraderFoundsService"
+		  class="com.cmall.groupcenter.txservice.TxTraderFoundsService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxGroupPayService"
+		  class="com.cmall.groupcenter.txservice.TxGroupPayService">
+
+	</bean>
+
+
+	<bean id="bean_com_cmall_dborm_txmapper_BcPurchaseOrderMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.BcPurchaseOrderMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_bbcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_BcPurchaseDetailMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.cmall.dborm.txmapper.BcPurchaseDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_bbcenter"></property>
+	</bean>
+	
+	
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxPurchaseOrderService" class="com.cmall.groupcenter.txservice.TxPurchaseOrderService" scope="prototype"></bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcMemberBankMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcMemberBankMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+
+	<bean id="bean_com_cmall_productcenter_service_ProductService" class="com.cmall.productcenter.service.ProductService"></bean>
+
+    <bean id="bean_com_cmall_dborm_txmapper_McExtendInfoHomehasMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.membercenter.McExtendInfoHomehasMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_membercenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcReckonOrderStepMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcReckonOrderStepMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcRebateLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcRebateLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcRebateOrderMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcRebateOrderMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_groupcenter_txservice_TxNcPostChangeService"
+		class="com.cmall.groupcenter.txservice.TxNcPostChangeService">
+
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_newscenter_NcPostMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.newscenter.NcPostMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_newscenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderDepositLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcTraderDepositLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcTraderInfoMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderFoundsChangeLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcTraderFoundsChangeLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcReckonOrderReturnDetailMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcReckonOrderReturnDetailMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderAccountLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcTraderAccountLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcTraderAccountChangeLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcTraderAccountChangeLogMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	<bean id="bean_com_cmall_dborm_txmapper_GcVpayOrderMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.cmall.dborm.txmapper.groupcenter.GcVpayOrderMapper"></property>
+		<property name="sqlSessionFactory" ref="bean_dborm_sqlfactory_groupcenter"></property>
+	</bean>
+	
+	<bean id="bean_com_srnpr_xmassystem_invoke_ref_CustRelAmtRef" class="com.cmall.groupcenter.invoke.imp.CustRelAmtRefImp"/>
+	<bean id="bean_com_srnpr_xmassystem_invoke_ref_RollbackLjqRef" class="com.cmall.groupcenter.invoke.imp.RollbackLjqRefImp"/>
+	<bean id="bean_com_srnpr_xmassystem_invoke_ref_ValidateStockRef" class="com.cmall.groupcenter.invoke.imp.ValidateStockRefImp"/>
+	<bean id="bean_com_srnpr_xmassystem_invoke_ref_GetCustLevelRef" class="com.cmall.groupcenter.invoke.imp.GetCustLevelRefImp"/>
+	<bean id="bean_com_srnpr_xmassystem_invoke_ref_GetCustInComingLineInfo" class="com.cmall.groupcenter.invoke.imp.GetCustInComingLineInfoImpl"/>
+	
+	
+</beans>

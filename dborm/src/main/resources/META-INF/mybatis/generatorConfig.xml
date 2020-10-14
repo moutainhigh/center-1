@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="META-INF/mybatis/init.properties" />
+
+	<!-- 指定数据连接驱动jar地址 -->
+	<!-- <classPathEntry location="${classPath}" /> -->
+
+
+
+	<context id="zapdata" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}zapdata${connectionParam}" userId="${userId}"
+			password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="test_call"></table>
+		<table tableName="zw_error"></table>
+		<table tableName="zd_server"></table>
+	</context>
+
+	<context id="ordercenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}ordercenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="oc_orderinfo"></table>
+		<table tableName="oc_orderdetail"></table>
+		<table tableName="oc_orderadress"></table>
+		<table tableName="oc_order_activity"></table>
+		<table tableName="oc_order_pay"></table>
+
+	</context>
+
+	<context id="productcenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}productcenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="pc_productinfo"></table>
+		<table tableName="pc_skuinfo"></table>
+		<table tableName="pc_productpic"></table>
+		<table tableName="pc_productflow"></table>
+		<table tableName="pc_productdescription"></table>
+		<table tableName="pc_productproperty"></table>
+		<table tableName="pc_productcategory_rel"></table>
+		<table tableName="pc_stock_info"></table>
+		<table tableName="pc_stock_detail"></table>
+	</context>
+
+
+
+	<context id="usercenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}usercenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="uc_sellerinfo"></table>
+
+	</context>
+
+	<context id="systemcenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}systemcenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="sc_flow_main"></table>
+
+	</context>
+
+	<context id="bbcenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}bbcenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="bc_purchase_detail"></table>
+
+	</context>
+
+
+
+	<context id="membercenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}membercenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}.membercenter"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}.membercenter"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}.membercenter"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="mc_member_info"></table>
+		<table tableName="mc_login_info"></table>
+		<table tableName="mc_account_info"></table>
+		<table tableName="mc_extend_info_star"></table>
+		<table tableName="mc_extend_info_homehas"></table>
+	</context>
+
+
+
+	<context id="groupcenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}groupcenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}.groupcenter"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}.groupcenter"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}.groupcenter"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="gc_reckon_order_detail"></table>
+		<table tableName="gc_reckon_order_info"></table>
+		<table tableName="gc_group_account"></table>
+		<table tableName="gc_group_level"></table>
+		<table tableName="gc_member_relation"></table>
+		<table tableName="gc_active_month"></table>
+		<table tableName="gc_reckon_log"></table>
+		<table tableName="gc_withdraw_log"></table>
+		<table tableName="gc_pay_order_info"></table>
+		<table tableName="gc_pay_order_detail"></table>
+		<table tableName="gc_account_change_log"></table>
+		<table tableName="gc_reckon_order_step"></table>
+		<table tableName="gc_active_log"></table>
+		<table tableName="gc_level_log"></table>
+		<table tableName="gc_member_bank"></table>
+		<table tableName="gc_pay_order_log"></table>
+		<table tableName="gc_extend_order_status_homehas"></table>
+		<table tableName="gc_account_marketing"></table>
+		<table tableName="gc_rebate_log"></table>
+		<table tableName="gc_rebate_order"></table>
+		<table tableName="gc_trader_deposit_log"></table>
+		<table tableName="gc_trader_info"></table>
+		<table tableName="gc_trader_founds_change_log"></table>
+	</context>
+
+
+
+
+	<context id="newscenter" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="${driverClass}"
+			connectionURL="${connectionAddress}newscenter${connectionParam}"
+			userId="${userId}" password="${password}" />
+		<javaModelGenerator targetPackage="${modelPackage}.newscenter"
+			targetProject="${projectName}" />
+		<sqlMapGenerator targetPackage="${mapperPackage}.newscenter"
+			targetProject="${projectName}" />
+		<javaClientGenerator targetPackage="${mapperPackage}.newscenter"
+			targetProject="${projectName}" type="XMLMAPPER" />
+
+		<table tableName="nc_post"></table>
+	</context>
+
+
+
+
+</generatorConfiguration>
